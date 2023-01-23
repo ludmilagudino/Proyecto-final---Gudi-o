@@ -1,0 +1,252 @@
+/* FUENTES */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&family=Raleway:wght@300&display=swap");
+
+body {
+  /* background-color: #FAF1E8; */
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* HEADER  */
+.index {
+  margin: 15px;
+}
+
+/* NAV */
+
+nav {
+  background-color: #e3e3e1;
+}
+
+.nav-link {
+  color: #68753d;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 1rem;
+  letter-spacing: 2px;
+}
+
+.nav-item :hover {
+  color: #313421;
+  text-decoration: underline;
+}
+
+.logoNav {
+  width: 25%;
+}
+
+/* HERO */
+
+.heroTienda {
+  text-align: center;
+  /* background-image: url(../imagenes/header.jpg); */
+  background-image: url(../imagenes/2ba1dc76d146027377625bd4e73f5748.jpg);
+  background-size: cover;
+}
+
+.imgHero {
+  margin: 3rem;
+  width: 35%;
+}
+
+/* BOTON TIENDA */
+.buttonIndex {
+  margin-bottom: 4rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 12px 24px;
+  border: 1px solid #313421;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  color: #313421;
+  z-index: 1;
+}
+
+.buttonIndex:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: #e3e3e1;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.buttonIndex:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #68753d;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.buttonIndex:hover {
+  color: #ffffff;
+  border: 1px solid #68753d;
+}
+
+.buttonIndex:hover:before {
+  top: -35%;
+  background-color: #68753d;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.buttonIndex:hover:after {
+  top: -45%;
+  background-color: #68753d;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/* NUEVAS FRAGANCIAS INDEX */
+.productos {
+  background-color: #e3e3e1;
+  padding-top: 3rem;
+  margin-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.productos h2 {
+  text-align: center;
+}
+
+.fragancias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fraganciasCards {
+  margin: 0.5rem;
+}
+
+.fraganciasCards h5 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.btnFragancias {
+  background-color: #a0b071;
+  border-color: #ffffff;
+}
+
+.btnFragancias:hover {
+  background-color: #68753d;
+  border-color: #ffffff;
+}
+
+.hrFragancias {
+  width: 25%;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+/* SOBRE NOSOTROS INDEX */
+.imgVelas {
+  width: 40%;
+}
+
+.sobreNosotros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.textoSobre {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+}
+
+.textoSobre h3 {
+  padding-top: 1rem;
+}
+
+hr {
+  width: 50%;
+}
+
+/* GALERIA INDEX */
+.galeria {
+  background-color: #e3e3e1;
+}
+
+.galeria h3 {
+  padding: 1rem;
+}
+
+.hrGaleria {
+  width: 40%;
+  margin: auto;
+}
+
+.imagenes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.imgGaleria {
+  width: 15rem;
+  margin: 3rem;
+}
+
+.imagenes2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgGaleria2 {
+  width: 10rem;
+  margin: 1rem;
+}
+
+.botonWhatsApp img {
+  width: 4rem;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* TIENDA */
+.logoCarrito{
+  width: 2rem;
+}
+
+.contenidoTienda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.card {
+    margin-top: 3rem;
+    width: 18rem;
+}
+
+.buttonTienda {
+    margin-bottom: 1rem;
+}
+
+.cerrar {
+  width: 3rem;
+}
