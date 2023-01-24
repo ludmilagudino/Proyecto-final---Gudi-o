@@ -96,7 +96,10 @@ nuevasFragancias.forEach((frag) => {
 
 //CREACION DE CARDS POR PRODUCTO
 let contenedor = document.getElementById("contenidoTienda");
-let carrito = [];
+
+//ARRAY CARRITO
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
 let verCarrito = document.getElementById("verCarrito");
 
 productos.forEach((prod) => {
@@ -133,6 +136,7 @@ productos.forEach((prod) => {
         precio: prod.precio
       });
       console.log(carrito);
+      guardarCarrito();
     });
   }  
 });
@@ -214,7 +218,19 @@ const mostrarCarrito = () => {
 
     carrito = carrito.filter((carritoId) => {
       return carritoId !== buscarId;
-    })
+    });
 
-    mostrarCarrito()
-  }
+    guardarCarrito();
+    mostrarCarrito();
+  };
+
+//GUARDAR CARRITO EN LOCAL STORAGE
+const guardarCarrito = () => {
+  localStorage.setItem("carrito",JSON.stringify(carrito));
+};
+
+//RECUPERAR CARRITO LOCAL STORAGE
+
+
+
+  
