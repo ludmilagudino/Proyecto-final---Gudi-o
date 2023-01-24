@@ -1,54 +1,3 @@
-const productos = [
-  {
-    id: 1,
-    nombre: "BOUQUET DE ROSAS",
-    precio: 920,
-    img: "https://thecandleshop.com.ar/public/assets//1064/gt_1643912838A02BR_a.jpg",
-  },
-  {
-    id: 2,
-    nombre: "HIGO DE ORIENTE",
-    precio: 920,
-    img: "https://thecandleshop.com.ar/public/assets//17/gt_1643912922A02HI_a.jpg",
-  },
-  {
-    id: 3,
-    nombre: "LAVANDA MENTA",
-    precio: 920,
-    img: "https://thecandleshop.com.ar/public/assets//404/gt_1621523896A02LM_b.jpg",
-  },
-  {
-    id: 4,
-    nombre: "SANDIA PEPINO",
-    precio: 920,
-    img: "https://thecandleshop.com.ar/public/assets//21/gt_1621523302A02P_b.jpg",
-  },
-  {
-    id: 1,
-    nombre: "BOUQUET DE ROSAS",
-    precio: 920,
-    img: "https://thecandleshop.com.ar/public/assets//1064/gt_1643912838A02BR_a.jpg",
-  },
-  {
-    id: 2,
-    nombre: "HIGO DE ORIENTE",
-    precio: 920,
-    img: "https://thecandleshop.com.ar/public/assets//17/gt_1643912922A02HI_a.jpg",
-  },
-  {
-    id: 3,
-    nombre: "LAVANDA MENTA",
-    precio: 920,
-    img: "https://thecandleshop.com.ar/public/assets//404/gt_1621523896A02LM_b.jpg",
-  },
-  {
-    id: 4,
-    nombre: "SANDIA PEPINO",
-    precio: 920,
-    img: "https://thecandleshop.com.ar/public/assets//21/gt_1621523302A02P_b.jpg",
-  },
-];
-
 const nuevasFragancias = [
   {
     fragancia: "PEPINO",
@@ -96,13 +45,16 @@ nuevasFragancias.forEach((frag) => {
 
 //CREACION DE CARDS POR PRODUCTO
 let contenedor = document.getElementById("contenidoTienda");
+let productos = [];
 
 //ARRAY CARRITO
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 let verCarrito = document.getElementById("verCarrito");
 
-productos.forEach((prod) => {
+
+crearCards = () => {
+  productos.forEach((prod) => {
 
   const {id, nombre, precio, img } = prod;
 
@@ -123,7 +75,7 @@ productos.forEach((prod) => {
 
     let comprar = document.createElement("button");
     comprar.innerHTML = "Agregar al carrito";
-    comprar.className = "buttonIndex buttonTienda";
+    comprar.className = "buttonIndex buttonTienda full-rounded";
   
     contenido.append(comprar);
 
@@ -140,6 +92,7 @@ productos.forEach((prod) => {
     });
   }  
 });
+}
 
 
 //CREACION DE MODAL
@@ -229,8 +182,12 @@ const guardarCarrito = () => {
   localStorage.setItem("carrito",JSON.stringify(carrito));
 };
 
-//RECUPERAR CARRITO LOCAL STORAGE
+//FETCH
+fetch('../data/productos.json')
+.then((res) => res.json())
+.then((jsonResponse) => {
+    productos = jsonResponse.data
+    crearCards();
+  })
 
 
-
-  

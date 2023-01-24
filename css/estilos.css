@@ -49,66 +49,41 @@ nav {
 }
 
 /* BOTON TIENDA */
-.buttonIndex {
-  margin-bottom: 4rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 12px 24px;
-  border: 1px solid #313421;
-  border-radius: 4px;
-  transition: all 0.2s ease-in;
+button {
+  font-size: 16px;
   position: relative;
-  overflow: hidden;
-  font-size: 19px;
-  color: #313421;
-  z-index: 1;
+  margin: auto;
+  padding: 1em 2.5em 1em 2.5em;
+  border: none;
+  background: #fff;
+  transition: all 0.1s linear;
+  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+  border: 1px solid #464646;
 }
 
-.buttonIndex:before {
-  content: "";
+button:active {
+  transform: scale(0.95);
+}
+
+button .border {
   position: absolute;
+  border: 1px solid #464646;
+  transition: all 0.3s 0.08s linear;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%) scaleY(1) scaleX(1.25);
-  top: 100%;
-  width: 140%;
-  height: 180%;
-  background-color: #e3e3e1;
-  border-radius: 50%;
+  width: 9em;
+  height: 3em;
+  transform: translate(-50%, -50%);
+}
+
+button:hover .border {
   display: block;
-  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-  z-index: -1;
+  width: 9.9em;
+  height: 3.7em;
 }
 
-.buttonIndex:after {
-  content: "";
-  position: absolute;
-  left: 55%;
-  transform: translateX(-50%) scaleY(1) scaleX(1.45);
-  top: 180%;
-  width: 160%;
-  height: 190%;
-  background-color: #68753d;
-  border-radius: 50%;
-  display: block;
-  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-  z-index: -1;
-}
-
-.buttonIndex:hover {
-  color: #ffffff;
-  border: 1px solid #68753d;
-}
-
-.buttonIndex:hover:before {
-  top: -35%;
-  background-color: #68753d;
-  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-}
-
-.buttonIndex:hover:after {
-  top: -45%;
-  background-color: #68753d;
-  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+.full-rounded {
+  border-radius: 2em;
 }
 
 /* NUEVAS FRAGANCIAS INDEX */
@@ -227,7 +202,7 @@ hr {
 }
 
 /* TIENDA */
-.logoCarrito{
+.logoCarrito {
   width: 2rem;
 }
 
@@ -239,22 +214,22 @@ hr {
 }
 
 .card {
-    margin-top: 3rem;
-    width: 18rem;
+  margin-top: 3rem;
+  width: 18rem;
 }
 
 .buttonTienda {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 
 
 /* MODAL */
-.modalContainer{
+.modalContainer {
   margin: 0 10%;
   border: 1px solid #E0E1E2;
   background-color: #ffffff;
-  display: flex;
+  display: none;
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
@@ -262,21 +237,21 @@ hr {
   left: 50%;
   top: 50%;
   width: 40%;
-  max-height: 35rem;
+  height: 100%;
   top: 0;
 }
 
-.modalHeader{
+.modalHeader {
   display: flex;
   justify-content: space-around;
   padding: 1rem;
 }
 
-.modalHeader hr{
+.modalHeader hr {
   width: 300%;
 }
 
-.hrCarrito{
+.hrCarrito {
   text-align: center;
   margin: auto;
   width: 80%;
@@ -284,50 +259,51 @@ hr {
 
 .cerrar {
   width: 3rem;
-  cursor: pointer;;
+  cursor: pointer;
+  ;
 }
 
-.carritoContenido{
+.carritoContenido {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  
+
 }
 
-.carritoContenido h4{
+.carritoContenido h4 {
   font-size: 1rem;
   margin: 0.5rem;
 }
 
-.carritoContenido p{
+.carritoContenido p {
   font-weight: bold;
   margin: 0.5rem;
 }
 
-.imgCarrito{
+.imgCarrito {
   width: 6rem;
   margin: 2rem;
 }
 
-.totalComprado{
+.totalComprado {
   display: flex;
   justify-content: space-around;
   text-align: center;
   margin-top: 2rem;
 }
 
-.totalComprado p{
+.totalComprado p {
   font-weight: bold;
 }
 
-.eliminar{
+.eliminar {
   width: 1rem;
   cursor: pointer;
   margin: 0.5rem;
 }
 
-.eliminarProducto{
+.eliminarProducto {
   display: flex;
 }
 
@@ -336,21 +312,30 @@ hr {
 /* FOOTER */
 footer {
   margin-top: 3rem;
-  background-color:#e3e3e1;
+  background-color: #e3e3e1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   justify-content: space-evenly;
-  align-items: center; }
-  footer ul li {
-    display: inline; }
-    footer ul li img {
-      width: 40px;
-      height: 40px;
-      transition: height 0.5s, width 0.5s; }
-    footer ul li img:hover {
-      width: 50px;
-      height: 50px; }
-  footer img {  
-    width: 20%;
-    margin: 20px; }
+  align-items: center;
+}
+
+footer ul li {
+  display: inline;
+}
+
+footer ul li img {
+  width: 40px;
+  height: 40px;
+  transition: height 0.5s, width 0.5s;
+}
+
+footer ul li img:hover {
+  width: 50px;
+  height: 50px;
+}
+
+footer img {
+  width: 20%;
+  margin: 20px;
+}
