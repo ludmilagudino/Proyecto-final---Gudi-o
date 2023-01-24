@@ -137,23 +137,84 @@ productos.forEach((prod) => {
   }  
 });
 
+
+//CREACION DE MODAL
 const modalContainer = document.getElementById("modalContainer")
 
-verCarrito.addEventListener("click", () => {
+
+const mostrarCarrito = () => {
+  modalContainer.innerHTML = "";
+  modalContainer.style.display = "flex"
     const modalHeader = document.createElement("div");
     modalHeader.className = "modalHeader";
     modalHeader.innerHTML = `
+    <div>
       <h2 class = "tituloModal"> Mi carrito </h2> 
       <hr>
+      </div>
     `;
     modalContainer.append(modalHeader);
 
     const modalCerrar = document.createElement("div");
     modalCerrar.innerHTML =
     `
+    
     <img class="cerrar" src="../imagenes/cerrar.png" alt="cerrar">
     `;
+    modalHeader.append(modalCerrar);
 
-    modalContainer.append(modalCerrar);
+    modalCerrar.addEventListener("click", () =>{
+      modalContainer.style.display = "none";
+    })
 
-})
+    carrito.forEach((compra) => {
+      const {nombre, precio, img } = compra;
+      let carritoCompras = document.createElement("div");
+      carritoCompras.innerHTML = `
+        <div class = "carritoContenido">
+        <img class="imgCarrito" src="${img}" alt="" >
+        <h4>${nombre}</h4>
+        <p>$${precio}</p>
+        </div>
+      `;
+
+      modalContainer.append(carritoCompras);
+
+      let eliminar = document.createElement("div");
+      eliminar.className = "eliminarProducto";
+      eliminar.innerHTML = `
+      <hr class = "hrCarrito">
+      <img class="eliminar" src="../imagenes/cross-icon.png" alt="eliminar"> 
+      `
+      carritoCompras.append(eliminar);
+
+      eliminar.addEventListener("click",eliminarProducto)
+    });
+
+    const total = carrito.reduce((acc, comprado) => acc + comprado.precio, 0);
+
+    const totalComprado = document.createElement("div")
+    totalComprado.className = "totalComprado"
+    totalComprado.innerHTML = `
+    <p> Total a pagar </p>
+    <p> $${total} </p>
+    `
+    modalContainer.append(totalComprado);
+
+  }
+
+
+  //MOSTRAR CARRITO
+  verCarrito.addEventListener("click", mostrarCarrito);
+
+
+  //ELIMINAR PRODUCTOS DEL CARRITO
+  const eliminarProducto = () => {
+    const buscarId = carrito.find((elemento) => elemento.id);
+
+    carrito = carrito.filter((carritoId) => {
+      return carritoId !== buscarId;
+    })
+
+    mostrarCarrito()
+  }
