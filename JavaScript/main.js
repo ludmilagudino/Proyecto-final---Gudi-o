@@ -1,3 +1,22 @@
+//SELECCION DE ELEMENTOS
+//-----index-----
+const nuevas = document.getElementById("nuevasFragancias");
+
+//-----tienda------
+let contenedor = document.getElementById("contenidoTienda"); //Cards de la tienda
+
+let verCarrito = document.getElementById("verCarrito"); //Icono para ver carrito en navbar
+
+const modalContainer = document.getElementById("modalContainer") //Modal para mostrar carrito
+
+//-----array de productos-----
+let productos = [];
+
+//-----array de carrito-----
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+
+
 //Array de nuevas fragancias mostradas en el index
 const nuevasFragancias = [
   {
@@ -16,16 +35,10 @@ const nuevasFragancias = [
     fragancia: "CEDRO",
     imagen: "./imagenes/nuevas fragancias/4.jpg",
   },
-  {
-    fragancia: "LIMA",
-    imagen: "./imagenes/nuevas fragancias/5.jpg",
-  },
 ];
 
 // ---------------INDEX------------------
 //CREACION DE CARDS NUEVAS FRAGANCIAS INDEX
-
-const nuevas = document.getElementById("nuevasFragancias");
 
 nuevasFragancias.forEach((frag) => {
   const { fragancia, imagen } = frag;
@@ -45,15 +58,6 @@ nuevasFragancias.forEach((frag) => {
 
 // ---------------TIENDA------------------
 //CREACION DE CARDS POR PRODUCTO
-let contenedor = document.getElementById("contenidoTienda");
-let productos = [];
-
-//ARRAY CARRITO
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-let verCarrito = document.getElementById("verCarrito");
-
-
 crearCards = () => {
   productos.forEach((prod) => {
 
@@ -117,8 +121,6 @@ crearCards = () => {
 
 
 //CREACION DE MODAL
-const modalContainer = document.getElementById("modalContainer")
-
 const mostrarCarrito = () => {
   modalContainer.innerHTML = "";
   modalContainer.style.display = "flex"
@@ -137,7 +139,7 @@ const mostrarCarrito = () => {
     modalCerrar.innerHTML =
     `
     
-    <img class="cerrar" src="../imagenes/cerrar.png" alt="cerrar">
+    <img class="cerrar" src="../imagenes/iconos/cerrar.png" alt="cerrar">
     `;
     modalHeader.append(modalCerrar);
 
@@ -165,7 +167,7 @@ const mostrarCarrito = () => {
       eliminar.className = "eliminarProducto";
       eliminar.innerHTML = `
       <hr class = "hrCarrito">
-      <img class="eliminar" src="../imagenes/cross-icon.png" alt="eliminar"> 
+      <img class="eliminar" src="../imagenes/iconos/cross-icon.png" alt="eliminar"> 
       `
       carritoCompras.append(eliminar);
 

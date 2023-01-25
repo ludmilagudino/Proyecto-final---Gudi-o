@@ -39,7 +39,7 @@ nav {
 .heroTienda {
   text-align: center;
   /* background-image: url(../imagenes/header.jpg); */
-  background-image: url(../imagenes/2ba1dc76d146027377625bd4e73f5748.jpg);
+  background-image: url(../imagenes/hero.jpg);
   background-size: cover;
 }
 
@@ -311,7 +311,7 @@ hr {
 
 /* FOOTER */
 footer {
-  margin-top: 3rem;
+  margin-top: 1rem;
   background-color: #e3e3e1;
   display: flex;
   flex-wrap: wrap;
@@ -339,3 +339,4 @@ footer img {
   width: 20%;
   margin: 20px;
 }
+
