@@ -9,44 +9,62 @@
         {
             "id": 2,
             "nombre": "HIGO DE ORIENTE",
-            "precio": 920,
+            "precio": 800,
             "img": "https://thecandleshop.com.ar/public/assets//17/gt_1643912922A02HI_a.jpg"
         },
         {
             "id": 3,
             "nombre": "LAVANDA MENTA",
-            "precio": 920,
+            "precio": 740,
             "img": "https://thecandleshop.com.ar/public/assets//404/gt_1621523896A02LM_b.jpg"
         },
         {
             "id": 4,
             "nombre": "SANDIA PEPINO",
-            "precio": 920,
+            "precio": 740,
             "img": "https://thecandleshop.com.ar/public/assets//21/gt_1621523302A02P_b.jpg"
         },
         {
-            "id": 1,
-            "nombre": "BOUQUET DE ROSAS",
-            "precio": 920,
-            "img": "https://thecandleshop.com.ar/public/assets//1064/gt_1643912838A02BR_a.jpg"
+            "id": 5,
+            "nombre": "GLOW SILVER",
+            "precio": 1000,
+            "img": "https://thecandleshop.com.ar/public/assets//1062/gt_1639150777NV03S_a.jpg"
         },
         {
-            "id": 2,
-            "nombre": "HIGO DE ORIENTE",
-            "precio": 920,
-            "img": "https://thecandleshop.com.ar/public/assets//17/gt_1643912922A02HI_a.jpg"
+            "id": 6,
+            "nombre": "GLOW GOLD",
+            "precio": 1000,
+            "img": "https://thecandleshop.com.ar/public/assets//1060/gt_1639150731NV03G_a.jpg"
         },
         {
-            "id": 3,
-            "nombre": "LAVANDA MENTA",
-            "precio": 920,
-            "img": "https://thecandleshop.com.ar/public/assets//404/gt_1621523896A02LM_b.jpg"
+            "id": 7,
+            "nombre": "GLOW PINK",
+            "precio": 1050,
+            "img": "https://thecandleshop.com.ar/public/assets//1061/gt_1639150748NV03RG_a.jpg"
         },
         {
-            "id": 4,
-            "nombre": "SANDIA PEPINO",
-            "precio": 920,
-            "img": "https://thecandleshop.com.ar/public/assets//21/gt_1621523302A02P_b.jpg"
+            "id": 8,
+            "nombre": "MANGO MARACUYA",
+            "precio": 500,
+            "img": "https://thecandleshop.com.ar/public/assets//356/gt_1621524866A03MA_b.jpg"
+        },
+        {
+            "id": 9,
+            "nombre": "VAINILLA TCS",
+            "precio": 550,
+            "img": "https://thecandleshop.com.ar/public/assets//37/gt_1621524801A03V_b.jpg"
+        },
+        {
+            "id": 10,
+            "nombre": "NECTARINE",
+            "precio": 500,
+            "img": "https://thecandleshop.com.ar/public/assets//27/gt_1621524507A03D_b.jpg"
+        },
+        {
+            "id": 11,
+            "nombre": "MANZANA CANELA",
+            "precio": 600,
+            "img": "https://thecandleshop.com.ar/public/assets//38/gt_1621524836A03Z_b.jpg"
         }
     ]
 }

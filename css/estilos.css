@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&family=Raleway:wght@300&display=swap");
 
 body {
-  /* background-color: #FAF1E8; */
+  background-color: rgba(255, 255, 255, 0.973);
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -90,7 +90,6 @@ button:hover .border {
 .productos {
   background-color: #e3e3e1;
   padding-top: 3rem;
-  margin-top: 4rem;
   padding-bottom: 3rem;
 }
 
@@ -200,6 +199,7 @@ hr {
   bottom: 10px;
   right: 10px;
 }
+
 
 /* TIENDA */
 .logoCarrito {
